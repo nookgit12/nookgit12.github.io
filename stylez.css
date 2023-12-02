@@ -1,0 +1,46 @@
+           body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('croissant-bg.jpg');
+  background-size: cover;
+  background-position: top;
+}
+
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+#clickCount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ADD8E6
+}
