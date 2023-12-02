@@ -3,35 +3,45 @@
 <head>
   <title>My Page</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    /* ... Your existing CSS styles ... */
+
+    /* Navigation bar styles */
+    nav {
+      background-color: #3498db;
+      padding: 10px 0;
       text-align: center;
     }
 
-    h2 {
-      color: #3498db;
-      margin-bottom: 20px;
-    }
-
-    img {
-      width: 200px;
-      height: auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    p {
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
       font-size: 18px;
-      margin-top: 20px;
     }
 
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Personal info section styles */
+    .about-me {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .about-me p {
+      margin-bottom: 10px;
+    }
+
+    /* Button styles */
     button {
       padding: 12px 24px;
       background-color: #3498db;
@@ -50,12 +60,26 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <!-- Add more navigation links if needed -->
+  </nav>
+
   <h2>Welcome to My Website</h2>
   <img src="picture.jpg" alt="github">
   <p>Check out my games:</p>
   <a href="https://cliker-game.netlify.app" target="_blank"><button>Croissant Clicker</button></a> 
   <a href="https://plen-game.netlify.app" target="_blank"><button>Plane Game</button></a>
   <a href="https://paintgame1.netlify.app" target="_blank"><button>Pixel Paint</button></a>
+
+  <div class="about-me">
+    <h3>About Me</h3>
+    <p>My name is Oliver and I'm Finnish. I love programming, tech, and aviation.</p>
+  </div>
+
+  <footer>
+    &copy; 2023 My Website. All rights reserved.
+  </footer>
 </body>
 </html>
-
