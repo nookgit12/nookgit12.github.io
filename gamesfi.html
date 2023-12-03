@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <title>Oma Pelisivusto</title>
+  <style>
+    /* Your CSS styles here */
+    /* ... */
+
+    /* Button styles */
+    button,
+    .link_games {
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      text-decoration: none; /* Apply button-like styling to anchor tag */
+      display: inline-block; /* Ensures anchor tag behaves like a button */
+      text-align: center;
+    }
+
+    button:hover,
+    .link_games:hover {
+      background-color: #2980b9;
+    }
+
+    /* Game cards */
+    .game-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .game-card img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tervetuloa omaan pelisivustooni!</h1>
+
+  <div class="game-card">
+    <h2>Croissant Clicker</h2>
+    <a href="clicker.html" target="_blank"><button>Pelaa croissant clickeria</button></a>
+  </div>
+
+  <div class="game-card">
+    <h2>Lentopeli</h2>
+    <a href="plane.html" target="_blank"><button>Pelaa lentopeliä</button></a>
+  </div>
+
+  <div class="game-card">
+    <h2>Pikselimaalauspeli</h2>
+    <a href="pixel.html" target="_blank"><button>Pelaa pikselipeliä</button></a>
+  </div>
+
+  <a href="index.html" class="link_games">Siirry kotisivulle</a>
+  
+  <footer>
+    &copy; 2023 Oma Pelisivusto. Kaikki oikeudet pidätetään.
+  </footer>
+</body>
+</html>
