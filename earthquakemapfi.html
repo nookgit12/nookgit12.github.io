@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maanjäristys kartta</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  />
+  <style>
+    #map {
+      height: 600px;
+    }
+    
+    h1 {
+      font-family: 'Comic Sans MS', cursive; /* Comic Sans font */
+    }
+  </style>
+</head>
+<body>
+
+<h1>Oliverin maanjäristys kartta</h1>
+
+<div id="map"></div>
+
+<h2>Värien merkitykset: vihreä: pieni sininen: lievä punainen: paha/h2>
+   <a href="indexfi.html" class="link_games">Mene kotisivulle</a>
+  
+<h3>2023 Oliver Hiivola</h3>
+
+<script
+  src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  var map = L.map('map').setView([0, 0], 2); // Initial coordinates and zoom level
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+
+  // Function to set color based on earthquake magnitude
+  function getColor(magnitude) {
+    if (magnitude < 4) {
+      return 'green'; // Small earthquakes
+    } else if (magnitude < 7) {
+      return 'blue'; // Mild earthquakes
+    } else {
+      return 'red'; // Bad earthquakes
+    }
+  }
+
+  // Fetch earthquake data from an API (e.g., USGS earthquake feed)
+  $.getJSON('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson', function(data) {
+    L.geoJSON(data, {
+      pointToLayer: function(feature, latlng) {
+        return L.circleMarker(latlng, {
+          radius: feature.properties.mag * 5, // Set marker size based on earthquake magnitude
+          fillColor: getColor(feature.properties.mag), // Set marker color based on earthquake magnitude
+          color: '#fff',
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 0.8
+        }).bindPopup(`<b>${feature.properties.place}</b><br>Magnitude: ${feature.properties.mag}`);
+      }
+    }).addTo(map);
+  });
+</script>
+
+</body>
+</html>
