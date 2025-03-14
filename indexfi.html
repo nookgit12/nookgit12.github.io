@@ -3,13 +3,21 @@
 <head>
   <title>Minun Sivuni</title>
   <style>
-    /* ... Your existing CSS styles ... */
+    /* General body and html styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
 
     /* Navigation bar styles */
     nav {
       background-color: #3498db;
-      padding: 10px 0;
+      padding: 15px 0;
       text-align: center;
+      font-size: 12px;
+      font-family: sans-serif;
     }
 
     nav a {
@@ -19,26 +27,43 @@
       font-size: 18px;
     }
 
+    /* Personal info section styles */
+    .about-me {
+      background-color: #f9f9f9;
+      padding: 50px;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-family: sans-serif;
+    }
+
+    img {
+      display: block; /* Makes the image a block element */
+      margin-left: auto; /* Centers the image horizontally */
+      margin-right: auto; /* Centers the image horizontally */
+    }
+
+    .about-me p {
+      margin-bottom: 10px;
+    }
+
+    /* Welcome section styles */
+    h2 {
+      margin-top: 20px; /* Adds space above the header */
+      text-align: center; /* Centers the header text */
+      font-size: 35px;
+      font-family: sans-serif;
+    }
+
+    /* Footer styles */
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 20px 0;
-      position: absolute;
-      bottom: 0;
       width: 100%;
-    }
-
-    /* Personal info section styles */
-    .about-me {
-      background-color: #f9f9f9;
-      padding: 20px;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .about-me p {
-      margin-bottom: 10px;
+      margin-top: auto; /* Pushes the footer down */
+      font-family: sans-serif;
     }
 
     /* Button styles */
@@ -69,14 +94,15 @@
   </nav>
 
   <h2>Tervetuloa Sivulleni</h2>
-  <img src="EVERYTHING/picture.jpg" alt="github">
+  <img src="EVERYTHING/picture.png" alt="github">
+
   <div class="about-me">
     <h3>Tietoa Minusta</h3>
-    <p>Nimeni on Oliver ja olen suomalainen. Pidän ohjelmoinnista, tekniikasta ja ilmailusta.</p>
+    <p>Nimeni on Oliver ja olen Suomesta. Pidän ohjelmoinnista ja tekniikasta</p>
   </div>
 
   <footer>
-    &copy; 2024 Oliver Hiivola. Kaikki oikeudet pidätetään.
+    &copy; 2025 Oliver Hiivola. Kaikki oikeudet pidätetään.
   </footer>
 </body>
 </html>

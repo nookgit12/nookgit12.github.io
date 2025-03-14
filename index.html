@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Page</title>
   <style>
-    /* ... Your existing CSS styles ... */
+    /* General body and html styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
 
     /* Navigation bar styles */
     nav {
       background-color: #3498db;
-      padding: 10px 0;
+      padding: 15px 0;
       text-align: center;
+      font-size: 12px;
+      font-family: sans-serif;
     }
 
     nav a {
@@ -19,30 +29,43 @@
       font-size: 18px;
     }
 
+    /* Personal info section styles */
+    .about-me {
+      background-color: #f9f9f9;
+      padding: 50px;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-family: sans-serif;
+    }
+
+    img {
+      display: block; /* Makes the image a block element */
+      margin-left: auto; /* Centers the image horizontally */
+      margin-right: auto; /* Centers the image horizontally */
+    }
+
+    .about-me p {
+      margin-bottom: 10px;
+    }
+
+    /* Welcome section styles */
+    h2 {
+      margin-top: 20px; /* Adds space above the header */
+      text-align: center; /* Centers the header text */
+      font-size: 35px;
+      font-family: sans-serif;
+    }
+
+    /* Footer styles */
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 20px 0;
-      position: absolute;
-      bottom: 0;
       width: 100%;
-    }
-
-    /* Personal info section styles */
-    .about-me {
-      background-color: #f9f9f9;
-      padding: 20px;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    img {
-      image-resolution: 320x320;
-    }
-
-    .about-me p {
-      margin-bottom: 10px;
+      margin-top: auto; /* Pushes the footer down */
+      font-family: sans-serif;
     }
 
     /* Button styles */
@@ -68,14 +91,15 @@
     <a href="index.html">Home</a>
     <a href="EVERYTHING/games.html">Games</a>
     <a href="EVERYTHING/earthquakemap.html">Earthquake map</a> 
-    <a href="EVERYTHING/index (1).html">Calculator</a> 
     <a href="files_for_download/index.html">Download page</a>
     <a href="indexfi.html">Finnish</a>
-    <a href="EVERYHING/featurephone.html">For featurephones</a>
     </nav>
 
   <h2>Welcome to My Website</h2>
+
+  <!-- Image positioned below the header and centered -->
   <img src="EVERYTHING/picture.png" alt="github">
+
   <div class="about-me">
     <h3>About Me</h3>
     <p>My name is Oliver and I'm Finnish. I like programming and tech</p>
