@@ -6,3 +6,7 @@ aaswahtml {
 #main {
   border:solid 2px black;
 }
+
+h1, h3, h2 {
+  font-family: sans-serif;
+}

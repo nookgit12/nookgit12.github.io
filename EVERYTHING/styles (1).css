@@ -45,3 +45,7 @@ button:active {
   transform: translate(2px, 2px);
   box-shadow: none;
 }
+
+h1, h3, h2 {
+  font-family: sans-serif;
+}

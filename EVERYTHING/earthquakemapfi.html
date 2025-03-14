@@ -12,7 +12,7 @@
     }
     
     h1 {
-      font-family: 'Comic Sans MS', cursive; /* Comic Sans font */
+      font-family: sans-serif;
     }
   </style>
 </head>
@@ -51,7 +51,7 @@
   }
 
   // Fetch earthquake data from an API (e.g., USGS earthquake feed)
-  $.getJSON('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson', function(data) {
+  $.getJSON('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson', function(data) {
     L.geoJSON(data, {
       pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, {
